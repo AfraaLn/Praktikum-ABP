@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Saudara</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #fdf6ee;
+      color: #3b2a1a;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #3b2a1a;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    /* Section title */
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #3b2a1a;
+    }
+
+    /* Card */
+    .card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .harga {
+      font-size: 18px;
+      font-weight: bold;
+      color: #c8853a;
+    }
+
+    /* Fitur */
+    .fitur-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    /* CTA */
+    .cta {
+      background-color: #3b2a1a;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1e150d;
+      color: #9a8875;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (Bootstrap) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">Kopi Saudara</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#menu-section">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Keunggulan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Pesan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (CSS) -->
+  <section class="hero">
+    <div>
+      <h1>Kopi Asli Indonesia</h1>
+      <p>Dari biji terbaik Gayo, Toraja, dan Flores — langsung ke cangkirmu</p>
+      <a href="#menu-section" class="btn btn-warning btn-lg px-4">Lihat Menu</a>
+    </div>
+  </section>
+
+  <!-- MENU (Bootstrap Card + Grid) -->
+  <section class="container my-5" id="menu-section">
+    <h2 class="section-title">Menu Pilihan</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" class="card-img-top" alt="Espresso">
+          <div class="card-body text-center">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text text-muted">Double shot biji Arabika Gayo dengan crema sempurna.</p>
+            <div class="harga mb-3">Rp 20.000</div>
+            <button class="btn btn-outline-warning">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600" class="card-img-top" alt="Latte">
+          <div class="card-body text-center">
+            <h5 class="card-title">Honey Latte</h5>
+            <p class="card-text text-muted">Espresso lembut dengan susu segar dan madu lokal.</p>
+            <div class="harga mb-3">Rp 28.000</div>
+            <button class="btn btn-outline-warning">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" class="card-img-top" alt="Cold Brew">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cold Brew</h5>
+            <p class="card-text text-muted">Diseduh 18 jam, rasa smooth dan bold yang menyegarkan.</p>
+            <div class="harga mb-3">Rp 25.000</div>
+            <button class="btn btn-outline-warning">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN (Bootstrap Grid) -->
+  <section class="container my-5" id="fitur">
+    <h2 class="section-title">Keunggulan Kami</h2>
+    <div class="row text-center">
+
+      <div class="col-md-4 mb-4">
+        <div class="fitur-icon">☕</div>
+        <h5>Biji Specialty</h5>
+        <p class="text-muted">Hanya biji kopi dengan skor cupping di atas 85 poin yang kami gunakan.</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="fitur-icon">🔥</div>
+        <h5>Roasting Artisan</h5>
+        <p class="text-muted">Disangrai manual oleh master roaster setiap hari untuk kesegaran terbaik.</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="fitur-icon">🚚</div>
+        <h5>Kirim ke Rumah</h5>
+        <p class="text-muted">Pesan online dan biji kopi segar tiba di pintu rumahmu dalam 1 hari.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA (CSS) -->
+  <section class="cta" id="cta">
+    <h2>Siap Menikmati Kopi Terbaik?</h2>
+    <p class="mt-2 mb-4">Pesan sekarang dan dapatkan gratis ongkir untuk pembelian pertama</p>
+    <a href="#" class="btn btn-warning btn-lg px-5">Pesan Sekarang</a>
+  </section>
+
+  <!-- FOOTER (CSS) -->
+  <footer>
+    <p>© 2026 Kopi Saudara — Specialty Coffee Indonesia</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
