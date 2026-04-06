@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+     Nama: Afra Lintang Maharani, NIM: 2311102258 
+<head>
+    <title>Home</title>
+    <style>
+        
+        .btn-blue {
+            background-color: #007bff; 
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .btn-blue:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Hai, Selamat datang, {{ $user->name }}</h2> 
+
+    <a href="/logout" class="btn-blue">Logout</a> 
+</body>
+</html>
